@@ -1,0 +1,24 @@
+{
+  "name": "DoubleClick",
+  "version": "1.0.0",
+  "description": "Sistema completo DoubleClick - Frontend + Backend",
+  "scripts": {
+    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && npm start",
+    "frontend": "cd frontend && npm run dev",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "npm run start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "doubleclick",
+    "advertising",
+    "react",
+    "express",
+    "mysql"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT"
+}
