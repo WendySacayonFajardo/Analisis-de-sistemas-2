@@ -1,0 +1,246 @@
+/* App.css */
+/* Estilos principales de la aplicación */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Botón de volver */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Página de inicio */
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 1rem;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-header {
+  text-align: center;
+  color: white;
+  padding: 4rem 2rem 3rem;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.home-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.95;
+}
+
+.home-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.demo-section {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  margin: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.demo-section h2 {
+  color: #667eea;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.demo-section p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.privacy-button {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.privacy-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.home-footer {
+  text-align: center;
+  color: white;
+  padding: 3rem 2rem 2rem;
+  animation: fadeIn 1s ease-out 0.6s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home-footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.home-footer a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 1rem;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 2rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .home-content {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .demo-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .demo-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .demo-section p {
+    font-size: 1rem;
+  }
+
+  .back-button {
+    top: 10px;
+    left: 10px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
